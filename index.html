@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title id="page-title">Home</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- BEGIN LivePerson Monitor. -->
+    <script type="text/javascript">
+      (window.lpTag = window.lpTag || {}),
+        "undefined" == typeof window.lpTag._tagCount
+          ? ((window.lpTag = {
+              wl: lpTag.wl || null,
+              scp: lpTag.scp || null,
+              site: "78774457" || "",
+              section: lpTag.section || "",
+              tagletSection: lpTag.tagletSection || null,
+              autoStart: lpTag.autoStart !== !1,
+              ovr: lpTag.ovr || {},
+              _v: "1.10.0",
+              _tagCount: 1,
+              protocol: "https:",
+              events: {
+                bind: function (t, e, i) {
+                  lpTag.defer(function () {
+                    lpTag.events.bind(t, e, i);
+                  }, 0);
+                },
+                trigger: function (t, e, i) {
+                  lpTag.defer(function () {
+                    lpTag.events.trigger(t, e, i);
+                  }, 1);
+                },
+              },
+              defer: function (t, e) {
+                0 === e
+                  ? ((this._defB = this._defB || []), this._defB.push(t))
+                  : 1 === e
+                  ? ((this._defT = this._defT || []), this._defT.push(t))
+                  : ((this._defL = this._defL || []), this._defL.push(t));
+              },
+              load: function (t, e, i) {
+                var n = this;
+                setTimeout(function () {
+                  n._load(t, e, i);
+                }, 0);
+              },
+              _load: function (t, e, i) {
+                var n = t;
+                t ||
+                  (n =
+                    this.protocol +
+                    "//" +
+                    (this.ovr && this.ovr.domain
+                      ? this.ovr.domain
+                      : "lptag.liveperson.net") +
+                    "/tag/tag.js?site=" +
+                    this.site);
+                var o = document.createElement("script");
+                o.setAttribute("charset", e ? e : "UTF-8"),
+                  i && o.setAttribute("id", i),
+                  o.setAttribute("src", n),
+                  document.getElementsByTagName("head").item(0).appendChild(o);
+              },
+              init: function () {
+                (this._timing = this._timing || {}),
+                  (this._timing.start = new Date().getTime());
+                var t = this;
+                window.attachEvent
+                  ? window.attachEvent("onload", function () {
+                      t._domReady("domReady");
+                    })
+                  : (window.addEventListener(
+                      "DOMContentLoaded",
+                      function () {
+                        t._domReady("contReady");
+                      },
+                      !1
+                    ),
+                    window.addEventListener(
+                      "load",
+                      function () {
+                        t._domReady("domReady");
+                      },
+                      !1
+                    )),
+                  "undefined" === typeof window._lptStop && this.load();
+              },
+              start: function () {
+                this.autoStart = !0;
+              },
+              _domReady: function (t) {
+                this.isDom ||
+                  ((this.isDom = !0),
+                  this.events.trigger("LPT", "DOM_READY", { t: t })),
+                  (this._timing[t] = new Date().getTime());
+              },
+              vars: lpTag.vars || [],
+              dbs: lpTag.dbs || [],
+              ctn: lpTag.ctn || [],
+              sdes: lpTag.sdes || [],
+              hooks: lpTag.hooks || [],
+              identities: lpTag.identities || [],
+              ev: lpTag.ev || [],
+            }),
+            lpTag.init())
+          : (window.lpTag._tagCount += 1);
+    </script>
+    <!-- END LivePerson Monitor. -->
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li style="font-size: 1.77em"><a href="index.html">Home</a></li>
+
+        <li style="font-size: 1.77em"><a href="form.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <h2 style="font-size: 2.5em"><center>Your One-Stop Bookstore</center></h2>
+
+    <div class="item">
+      <div class="fixed-description">
+        <p>The Hobbit</p>
+
+        <p>Price: $15.00</p>
+      </div>
+
+      <button class="add-to-cart-btn" onclick="addToCart(1, 15)">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="item">
+      <div class="fixed-description">
+        <p>Harry Potter and the Sorcerer's Stone</p>
+
+        <p>Price: $20.00</p>
+      </div>
+
+      <button class="add-to-cart-btn" onclick="addToCart(2, 20)">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="item">
+      <div class="fixed-description">
+        <p>You Can Win</p>
+
+        <p>Price: $12.50</p>
+      </div>
+
+      <button class="add-to-cart-btn" onclick="addToCart(3, 12.5)">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="item">
+      <div class="fixed-description">
+        <p>The Book of Silence</p>
+
+        <p>Price: $8.75</p>
+      </div>
+
+      <button class="add-to-cart-btn" onclick="addToCart(4, 8.75)">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="cart-details" style="color: black">
+      <span id="cart-count">Cart Items: 0</span><br />
+
+      <span id="total-price">Total Price: $0.00</span>
+    </div>
+
+    <script>
+      var cartCount = 0;
+
+      var totalPrice = 0;
+
+      const pageTitleElement = document.getElementById("page-title").innerText;
+
+      const totalCartValueElement = document.getElementById("total-cart-value");
+
+      function addToCart(itemId, itemPrice) {
+        cartCount += 1;
+
+        totalPrice += itemPrice;
+
+        updateCartCount();
+
+        updateTotalPrice();
+
+        console.log(totalPrice);
+
+        // var totalPriceString = `Total Price: ${totalPrice}`;
+
+        // var pageTitleString = `Page Title: ${pageTitleElement}`;
+
+        window.lpTag = window.lpTag || {};
+
+        lpTag.sdes = lpTag.sdes || [];
+
+        lpTag.sdes.push({
+          type: "cart",
+          total: totalPrice,
+
+          currency: "USD",
+          numItems: cartCount,
+
+          products: [
+            {
+              product: {
+                name: "Page Title: " + pageTitleElement,
+              },
+            },
+          ],
+        });
+      }
+
+      function updateCartCount() {
+        const cartCountElement = document.getElementById("cart-count");
+
+        cartCountElement.textContent = "Cart Items: " + cartCount.toString();
+      }
+
+      function updateTotalPrice() {
+        const totalPriceElement = document.getElementById("total-price");
+
+        totalPriceElement.textContent =
+          "Total Price: " + "$" + totalPrice.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

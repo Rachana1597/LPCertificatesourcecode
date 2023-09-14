@@ -1,0 +1,305 @@
+/* <style> */
+/* Add some basic styling */
+
+body {
+  background-color: #c9c0bb;
+  font-family: Georgia;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+nav {
+  background-color: Black;
+
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: blue;
+
+  text-decoration: none;
+}
+
+.cart-details {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  color: white;
+}
+
+.item {
+  border: 1px solid black;
+
+  padding: 20px;
+
+  /* padding: 10px; */
+
+  margin: 10px;
+
+  max-width: 200px;
+}
+
+.fixed-description {
+  background-color: blue;
+
+  padding: 20px;
+
+  font-style: italic;
+}
+
+.add-to-cart-btn {
+  display: block;
+
+  width: 100%;
+
+  padding: 5px;
+
+  background-color: black;
+
+  color: white;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+#cart-count {
+  background-color: #c9c0bb;
+
+  color: black;
+
+  padding: 5px;
+
+  position: fixed;
+
+  top: 20px;
+
+  right: 200px;
+  font: Georgia;
+}
+
+#total-price {
+  background-color: #c9c0bb;
+
+  position: fixed;
+
+  top: 60px;
+
+  right: 200px;
+
+  font-size: 18px;
+  font: Georgia;
+}
+/* </style> */
+
+/* <style> */
+/* Add some basic styling */
+
+body {
+  font-family: Georgia;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+nav {
+  background-color: black;
+
+  padding: 10px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: silver;
+
+  text-decoration: none;
+}
+
+.cart-details {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  color: white;
+}
+
+.item {
+  border: 1px blue;
+
+  padding: 10px;
+
+  margin: 10px;
+
+  max-width: 300px;
+
+  text-align: center;
+
+  /* height: 200px; */
+}
+
+.fixed-description {
+  text-align: center;
+
+  background-color: black;
+
+  color: silver;
+
+  padding: 10px;
+
+  height: 200px;
+
+  font-style: italic;
+}
+
+.add-to-cart-btn {
+  display: block;
+
+  width: 100%;
+
+  padding: 10px;
+
+  background-color: white;
+
+  color: black;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+#cart-count {
+  background-color: #c9c0bb;
+
+  color: black;
+
+  /* border-top: 1px solid silver; */
+
+  padding: 5px;
+
+  position: fixed;
+
+  top: 20px;
+
+  right: 200px;
+  font: Georgia;
+}
+
+#total-price {
+  background-color: #c9c0bb;
+
+  position: fixed;
+
+  top: 60px;
+
+  right: 200px;
+
+  font-size: 18px;
+  font: Georgia;
+}
+#loginForm {
+  width: 100%;
+  height: 90vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.formContainer {
+  width: 40%;
+  height: 70vh;
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer form {
+  /* border: 10px solid white; */
+  background-color: #c9c0bb;
+  width: 80%;
+  height: 60vh;
+  display: inline;
+  align-items: center;
+  justify-content: left;
+}
+
+.formContainer form input,
+.formContainer form button {
+  width: 82%;
+  margin: 40px;
+  height: 40px;
+  text-decoration: none;
+  outline: none;
+  border: 2px solid silver;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 0 10px;
+}
+
+.formContainer form input::placeholder {
+  color: black;
+}
+/* </style> */
